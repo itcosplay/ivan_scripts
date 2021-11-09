@@ -12,9 +12,9 @@ from datacenter.models import (
 )
 
 
-def date_validate(date_text):
+def validate_date(date):
     try:
-        datetime.strptime(date_text, '%Y-%m-%d')
+        datetime.strptime(date, '%Y-%m-%d')
 
     except ValueError:
         print (
@@ -120,7 +120,7 @@ def create_commendation(
     Creates new commendation for schoolkid from teacher.
     date = "YYYY-MM-DD"
     '''
-    if date_validate(date) is False:
+    if validate_date(date) is False:
 
         return
 
