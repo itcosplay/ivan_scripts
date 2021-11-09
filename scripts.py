@@ -1,7 +1,15 @@
 from datetime import datetime
 from random import choice
 
-from datacenter.models import *
+from datacenter.models import (
+    Schoolkid,
+    Teacher,
+    Subject,
+    Lesson,
+    Mark,
+    Chastisement,
+    Commendation
+)
 
 
 def date_validate(date_text):
